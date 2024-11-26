@@ -1,6 +1,6 @@
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /************* début de la partie modifiée *************************/
+    /* On supprime le padding*/
     body .main-container { 
         padding: 0;
     }
@@ -13,7 +13,7 @@
     }
     .navbar li {
         margin: 0;
-        flex:1;
+        flex: 1;
         justify-content: center;     
     }
     .navbar a {
@@ -41,6 +41,7 @@
     .Search-bar input {
         padding-right: 70px;
     }
+    /* On cache le bouton "research " */
     .research-btn .research {
         display: none;
     }
@@ -83,14 +84,12 @@
     .hebergements-and-populars .hebergements { 
         background-color: white;
     }
-    .hebergements-cards ,
-    .grid-activity-in-Marseille ,
-    .footer-box {
-        grid-template-columns: 1fr;
-    }
-    
     .hebergements-and-populars .populars { 
         border-radius: 0px;
     }
-    /************* fin de la partie modifiée *************************/
+    .hebergements-cards,
+    .grid-activity-in-Marseille,
+    .footer-box {
+        grid-template-columns: 1fr;
+    }
 }
