@@ -2,18 +2,71 @@
 * {
     font-family: 'Raleway', sans-serif;
 }
-
+/*on supprime tous les margins et paddings*/
 * {
     margin: 0;
     padding: 0;
 }
-
+/* on déclare des variables de couleur*/
 :root {
     --blue: #0065FC;
     --lightBlue: #DEEBFF;
     --grey: #F2F2F2;
     --filter-bg-color: #DEEBFF;
     --white:white;
+}
+/*on rend flex pour en suite centrer sur l'axe principale (horizontal)*/
+body {
+    display: flex;
+    justify-content: center;
+}
+/* on crée un conteneur principal avec un maximum largeur de 1440px , un padding sur les côtés ⬅➡ */ 
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+/* on rend flex pour placer le logo et la nav dans chaques coins en prenant 100 % de la largeur du conteneur*/
+header { 
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+/* On crée une classe avec la propriété donnant une marge vers le ⬇ de 30px*/
+.margin-bottom {
+    margin-bottom: 30px;
+}
+/* on change la taille du logo et on le ⬇ de 31px */
+.logoReservia img {
+    height: 20px;
+    width: 60px;
+    padding-top: 31px;
+}
+/* On rend flex et on supprime les symboles de la liste à puce*/
+.navbar ul {
+    display:flex;
+    list-style: none;
+}
+/* on rend flex avec une marge sur la ⬅ et un padding en ⬆ et en ⬇ */
+.navbar a {
+    display:flex;
+    margin-left: 47px;
+    padding: 16px 0;
+}
+/* au survole du pointeur le texte devient bleu et une barre apparait */
+.navbar a:hover {
+    color: var(--blue);
+    border-top: 2px solid var(--blue);
+}
+/* permet de mettre en noir le texte et supprimer la barre de soulignement sur les liens du site*/
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/* Permet de mettre une marge vers le ⬇*/
+.research-title h1 {
+    margin-bottom: 10px;
 }
 /* Permet de mettre les éléments à la suite des autres sur l'axe secondaire (cross axis) et de les aligner*/
 .directionRowAndBaseline {
@@ -22,68 +75,13 @@
     align-items: baseline;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-}
-
-.main-container {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 50px;
-    box-sizing: border-box;
-}
-
-header { 
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.margin-bottom {
-    margin-bottom: 30px;
-}
-
-.logoReservia {
-    margin-top: 16px;
-}
-
-/* on change la taille du logo et on le descend de 15 px */
-.logoReservia img {
-    height: 20px;
-    width: 60px;
-    padding-top: 15px;
-}
-
-.navbar ul {
-    display:flex;
-    list-style: none;
-}
-
-.navbar a {
-    display:flex;
-    margin-left: 47px;
-    padding: 16px 0;
-}
-
-/* au survole du pointeur le texte devient bleu et une barre apparait */
-.navbar a:hover {
-    color: var(--blue);
-    border-top: 2px solid var(--blue);
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.research-title h1 {
-    margin-bottom: 10px;
-}
-
-
 /******************** bonton recherche ********************************/
-/*premier bouton de la barre de recherche*/
+/* On change la taille et la police du texte qui se trouve dans Search-bar*/
+.Search-bar input, button {
+    font-weight: bold;
+    font-size: 18px;
+}
+/* Premier bouton de la barre de recherche*/
 .map-logo {
     display:flex;
     background-color: var(--grey);
@@ -93,12 +91,12 @@ a {
     justify-content: center;
     align-items: center;   
 }
-/* On change la taille du logo dans ma-logo */
+/* On définit la taille du logo Booki */
 .map-logo i {
     height: 18px;
     width: 14px;
 }
-/*deuxième bouton de la barre de recherche*/ 
+/* Deuxième bouton de la barre de recherche*/ 
 input {
     height: 45px;
     max-width: 190px;
@@ -110,7 +108,7 @@ input {
     text-align: center;
     padding-bottom: 2px;
 }
-/* troisème bouton de la barre de recherche*/
+/* Troisème bouton de la barre de recherche*/
 .research-btn .research {
     display: flex;
     justify-content: center;
@@ -127,12 +125,6 @@ input {
     display: none;
     color: var(--white);
 }
-/* on change la taille et la police du texte*/
-.Search-bar input, button {
-    font-weight: bold;
-    font-size: 18px;
-}
-
 
 /******************** boutons filtres ************************/
 
