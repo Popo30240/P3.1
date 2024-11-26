@@ -1,0 +1,391 @@
+/****** General ***********/
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blue: #0065FC;
+    --lightBlue: #DEEBFF;
+    --grey: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+    --white:white;
+}
+/* Permet de mettre les éléments à la suite des autres sur l'axe secondaire (cross axis) et de les aligner*/
+.directionRowAndBaseline {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+header { 
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.margin-bottom {
+    margin-bottom: 30px;
+}
+
+.logoReservia {
+    margin-top: 16px;
+}
+
+/* on change la taille du logo et on le descend de 15 px */
+.logoReservia img {
+    height: 20px;
+    width: 60px;
+    padding-top: 15px;
+}
+
+.navbar ul {
+    display:flex;
+    list-style: none;
+}
+
+.navbar a {
+    display:flex;
+    margin-left: 47px;
+    padding: 16px 0;
+}
+
+/* au survole du pointeur le texte devient bleu et une barre apparait */
+.navbar a:hover {
+    color: var(--blue);
+    border-top: 2px solid var(--blue);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.research-title h1 {
+    margin-bottom: 10px;
+}
+
+
+/******************** bonton recherche ********************************/
+/*premier bouton de la barre de recherche*/
+.map-logo {
+    display:flex;
+    background-color: var(--grey);
+    border-radius: 15px 0 0 15px;
+    height: 49px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;   
+}
+/* On change la taille du logo dans ma-logo */
+.map-logo i {
+    height: 18px;
+    width: 14px;
+}
+/*deuxième bouton de la barre de recherche*/ 
+input {
+    height: 45px;
+    max-width: 190px;
+    border-left-style: none;
+    border-right-style: none;
+    border-color: rgba(94, 93, 93, 0.1);
+    /* border-color: var(--grey); */
+    border-width: 1px;
+    text-align: center;
+    padding-bottom: 2px;
+}
+/* troisème bouton de la barre de recherche*/
+.research-btn .research {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 0 15px 15px 0;
+    height: 49px;
+    padding: 0px 20px 0px 20px;
+    border: 0px;
+}
+/* quatrième bouton de la barre de recherche, mais qui est caché*/
+.research-btn .i {
+    display: none;
+    color: var(--white);
+}
+/* on change la taille et la police du texte*/
+.Search-bar input, button {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/******************** boutons filtres ************************/
+
+.filterBar p,
+ button {
+    font-size: 17px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+/* Squelette du bouton */
+.Button {
+    display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+
+    background-color: white;
+
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 25px;
+
+    border-color: var(--grey);
+}
+/* taille pour petit bouton */
+.smallButton {
+    height: 50px;
+    width: 134px;
+} 
+/* taille pour grand bouton */
+.bigButton {
+    height: 50px;
+    width: 173px;
+}
+/* effect bleu au survol du curseur */
+.Button:hover {
+    background-color: var(--lightBlue);
+}
+
+.logo-info {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+
+    border-style: solid;
+	border-width: 2px;
+	border-radius: 50% 50% 50% 50%;
+
+    border-color: var(--grey);
+
+    height: 10px;
+    width: 10px;
+    padding: 10px;
+
+    margin-right: 15px;
+}
+
+.logo-info i {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+
+    height: 1px;
+    width: 1px;
+}
+
+/****** Hebergements And populars ***********/
+.hebergements-and-populars {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.hebergements-and-populars h2 {
+    font-size: 22px;
+}
+
+/****** Hebergements ***********/
+.hebergements-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:2em;
+    box-sizing: border-box;
+    margin-top: 33px;
+}
+
+.hebergements {
+    background-color: var(--grey);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    width: 65%;
+}
+
+.hebergements-cards img {
+    height: 136px;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.card-content-hebergements {
+    border-radius: 20px;
+    padding-left: 15px;
+}
+
+/******************************/
+.card-popular-desktop {
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/*****************************/
+/****** populars ***********/
+.populars {
+    width: 32%;
+    background-color: var(--grey);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.populars-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populars-cards .card {
+    display: flex;
+    margin-top: 33px;
+    height: 136px;
+}
+
+.populars-cards img {
+    width: 33%;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.populars-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populars-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populars-cards .card-subtitle {
+    margin: 0;
+}
+
+.populars-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+.fa-solid {
+    color: var(--blue);
+}
+
+.fa-solidWhite {
+    color: var(--white);
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--grey)
+}
+
+/****** activité à Marseille ***********/
+
+/* .activity-in-Marseille {
+    border-color: black;
+    border-style: solid;
+	border-width: 2px;
+} */
+.activity-in-Marseille h2 {
+    padding: 15px;
+    margin-left: 15px;
+}
+
+.grid-activity-in-Marseille {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:2em;
+    box-sizing: border-box;
+    padding: 10px 30px 50px 30px;
+}
+
+.grid-activity-in-Marseille img {
+    height: 90%;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+}
+
+.card-content-activitys {
+    background-color: white;
+    border-radius: 20px;
+    height: 439px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card-content-activitys h3 {
+    padding: 10px 0 0 10px;
+}
+
+
+/****** Footer ***********/
+
+.footer-box {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: start;
+    padding: 10px 0 0px 10px;
+    height: 100%;
+    width: 100%;
+    background-color: var(--grey);
+}
+
+.footer-box ul {
+    list-style: none;
+}
+.footer-box .title-footer {
+    font-weight: bold;
+}
+.footer-box li {
+    margin: 10px;
+}

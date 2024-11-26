@@ -1,0 +1,97 @@
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    /************* début de la partie modifiée *************************/
+    body .main-container { 
+        padding: 0;
+        align-items: center;
+    }
+    .main-container header { 
+        flex-direction: column; 
+    }
+    .logoReservia {
+        display: flex;
+        justify-content: center;
+    }
+    .navbar li {
+        margin: 0;
+        flex:1;
+        justify-content: center;     
+    }
+    .navbar a {
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar a:hover {
+        border-top: 2px solid var(--blue) opacity 0;
+        border-bottom: 2px solid var(--blue);  
+    }
+    .research-title h1,
+    .research-title p,
+    .filter p ,
+    .logo-info {
+        margin-left: 10px;
+    }
+    .Search-bar {
+        justify-content: center;
+    }
+    form {
+        width: 169px;
+        padding-right: 56px;
+    }
+    .Search-bar input {
+        padding-right: 70px;
+    }
+    .research-btn .research {
+        display: none;
+    }
+    .Search-bar .research-btn .i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: var(--blue);
+
+        border-radius: 15px;
+        /* filter: drop-shadow(0px 4px 4px 0px rgba(0, 0, 0, 0.1)); */
+        box-shadow: 0px 4px 4px 0px #00000040;
+        border: 0px;
+
+        height: 50px;
+        padding: 0px 20px 0px 20px;
+    }
+    body .main-container .filterBar button {
+        height: 50px;
+        width: 162.5px;
+        margin: 10px;
+    }
+    body .main-container .filterBar .button-filter {
+        flex-wrap: wrap;
+    }
+    .research .infobar .button-filter {
+        align-items: center;
+    }
+    .infoBar {
+        margin:0;
+        align-items: center;
+    }
+    main .hebergements-and-populars {
+        flex-direction: column-reverse;
+    }
+    main .populars-cards {
+        display: block;
+    }
+    .hebergements-and-populars .hebergements { 
+        background-color: white;
+    }
+    .hebergements-cards ,
+    .grid-activity-in-Marseille ,
+    .footer-box {
+        grid-template-columns: 1fr;
+    }
+    
+    .hebergements-and-populars .populars { 
+        border-radius: 0px;
+    }
+    /************* fin de la partie modifiée *************************/
+}

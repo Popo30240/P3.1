@@ -1,0 +1,52 @@
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+    .hebergements-and-populars {
+        flex-direction: column;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .populars {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populars-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populars-cards a {
+        width: 30%;
+    }
+
+    main .card-title {
+        font-size: 14px;
+    }
+
+    main .card-subtitle {
+        font-size: 13px;
+    }
+    .activity-in-Marseille .card-title {
+        font-size: 16px;
+    }
+    .card-content-activitys {
+        height: 270px;
+    }
+    .card-content-activitys img {
+        height: 200px;
+    }
+    .filterBar {
+        flex-direction: column;
+    }
+    .filter {
+        margin-bottom: 15px;
+    }
+    
+}
