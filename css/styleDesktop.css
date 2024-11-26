@@ -20,6 +20,10 @@ body {
     display: flex;
     justify-content: center;
 }
+/* On supprime les puces des listes dans tous les ul du body*/
+body ul {
+    list-style: none;
+}
 /* on crée un conteneur principal avec un maximum largeur de 1440px , un padding sur les côtés ⬅➡ */ 
 .main-container {
     width: 100%;
@@ -46,7 +50,6 @@ header {
 /* On rend flex et on supprime les symboles de la liste à puce*/
 .navbar ul {
     display:flex;
-    list-style: none;
 }
 /* on rend flex avec une marge sur la ⬅ et un padding en ⬆ et en ⬇ */
 .navbar a {
@@ -74,19 +77,24 @@ a {
     flex-direction: row;
     align-items: baseline;
 }
-
 /******************** bonton recherche ********************************/
+/* On aligne les 3 boutons sur l'axe principale*/
+.Search-bar {
+    display: flex;
+    flex-direction: row;
+}
 /* On change la taille et la police du texte qui se trouve dans Search-bar*/
-.Search-bar input, button {
-    font-weight: bold;
+.Search-bar input,
+.Search-bar button {
     font-size: 18px;
+    font-weight: bold;
 }
 /* Premier bouton de la barre de recherche*/
 .map-logo {
     display:flex;
     background-color: var(--grey);
     border-radius: 15px 0 0 15px;
-    height: 49px;
+    height: 50px;
     width: 50px;
     justify-content: center;
     align-items: center;   
@@ -127,9 +135,9 @@ input {
 }
 
 /******************** boutons filtres ************************/
-
-.filterBar p,
- button {
+/* On change la taille et la police du texte dans filterBar*/
+.filterBar p, 
+.filterBar button {
     font-size: 17px;
     font-weight: bold;
     margin-right: 15px;
@@ -162,7 +170,7 @@ input {
 .Button:hover {
     background-color: var(--lightBlue);
 }
-
+/* On crée un cercle autour du i */
 .logo-info {
     display: flex;
 	align-items: center;
@@ -180,7 +188,7 @@ input {
 
     margin-right: 15px;
 }
-
+/* On centre l'icone et on définit sa taille*/
 .logo-info i {
     display: flex;
 	align-items: center;
@@ -361,7 +369,7 @@ input {
 
 
 /****** Footer ***********/
-
+/* On fractionne l'enfant en 3 colonnes*/
 .footer-box {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -372,12 +380,13 @@ input {
     background-color: var(--grey);
 }
 
-.footer-box ul {
-    list-style: none;
-}
-.footer-box .title-footer {
+/* on cible les premiers enfants de chaque chaque liste*/
+.footer-column-Left li:nth-child(1),
+.footer-column-Midle li:nth-child(1),
+.footer-column-Right li:nth-child(1) {
     font-weight: bold;
 }
+/* On rajoute une marge*/
 .footer-box li {
     margin: 10px;
 }
