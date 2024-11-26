@@ -37,6 +37,10 @@ header {
     justify-content: space-between;
     width: 100%;
 }
+/* tous titre h2 dans main sont en taille 22px*/
+main h2 {
+    font-size: 22px;
+}
 /* On crée une classe avec la propriété donnant une marge vers le ⬇ de 30px*/
 .margin-bottom {
     margin-bottom: 30px;
@@ -87,6 +91,16 @@ a {
 .Search-bar input,
 .Search-bar button {
     font-size: 18px;
+}
+/* on cible des mots pour en changer sa police en plus gras*/
+.Search-bar input,
+.Search-bar button,
+.filterBar p, 
+.filterBar button,
+.hebergements-cards a:nth-child(7),
+.footer-column-Left li:nth-child(1),
+.footer-column-Midle li:nth-child(1),
+.footer-column-Right li:nth-child(1) {
     font-weight: bold;
 }
 /* Premier bouton de la barre de recherche*/
@@ -139,8 +153,10 @@ input {
 .filterBar p, 
 .filterBar button {
     font-size: 17px;
-    font-weight: bold;
     margin-right: 15px;
+}
+.filterBar i {
+    size: 17px;
 }
 /* Squelette du bouton */
 .Button {
@@ -199,25 +215,15 @@ input {
 }
 
 /****** Hebergements And populars ***********/
+/* On rend flex et on mets de chaque côté ( hébergement ) ⬅➡ ( populaire) avec une marge en ⬇ */
 .hebergements-and-populars {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
 }
 
-.hebergements-and-populars h2 {
-    font-size: 22px;
-}
-
 /****** Hebergements ***********/
-.hebergements-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap:2em;
-    box-sizing: border-box;
-    margin-top: 33px;
-}
-
+/* On crée un fond en gris utilisant 65 % de large du conteneur hebergements-and-populars */
 .hebergements {
     background-color: var(--grey);
     border-radius: 20px;
@@ -226,70 +232,29 @@ input {
     width: 65%;
 }
 
-.hebergements-cards img {
-    height: 136px;
-    width: 100%;
-    border-radius: 20px 20px 0px 0px;
-}
-
-.card-content-hebergements {
+/**************** Cartes  **************************/
+/* On définit un fond blanc avec un effet d'ombre*/ 
+.card {
+    background-color: white;
     border-radius: 20px;
-    padding-left: 15px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+/* On utilise à toutes les images des cartes l'attribut: cover*/
+.card img, 
+.card-activitys img {
+    object-fit: cover;
+}
+/* On change la taille de la police à tous les titres des cartes */
+.card-title {
+    font-size: 16px;
 }
 
-/******************************/
-.card-popular-desktop {
-    height: 136px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+.euro {
+    font-weight: 700;
 }
 
-/*****************************/
-/****** populars ***********/
-.populars {
-    width: 32%;
-    background-color: var(--grey);
-    border-radius: 20px;
-    padding: 30px;
-    box-sizing: border-box;
-}
-
-.populars-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.populars-cards .card {
-    display: flex;
-    margin-top: 33px;
-    height: 136px;
-}
-
-.populars-cards img {
-    width: 33%;
-    border-radius: 20px 0px 0px 20px;
-}
-
-.populars-cards .card-content {
-    width: 67%;
-    padding-left: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-}
-
-.populars-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
-}
-
-.populars-cards .card-subtitle {
-    margin: 0;
-}
-
-.populars-cards .card-rating {
+.card-rating {
     margin-bottom: 5px;
 }
 
@@ -301,46 +266,79 @@ input {
     color: var(--white);
 }
 
-.section-title {
-    margin: 0;
-    font-size: 22px;
-}
-
-.card {
-    background-color: white;
-    border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-}
-
-.card img {
-    object-fit: cover;
-}
-
-.card-title {
-    font-size: 16px;
-}
-
-.euro {
-    font-weight: 700;
-}
-
 .neutral-star {
     color: var(--grey)
 }
+/*************************************************/
+
+/* On crée une grille qu'on fractionne en 3 colonnes pour nos cartes hébergements*/
+.hebergements-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:2em;
+    box-sizing: border-box;
+    margin-top: 33px;
+}
+/* On définit le fond de la carte */
+.card-content-hebergements {
+    padding-left: 15px;
+}
+/* On définit la ⬆⬇ et la ⬅➡ de l'image dans les cartes*/
+.hebergements-cards img {
+    height: 136px;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+/****** populars ***********/
+/* On crée un fond de couleur gris avec une largeur de 32 %*/
+.populars {
+    width: 32%;
+    background-color: var(--grey);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+/* On sépare le titre et l'icone*/
+.populars-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* On définit les cartes de la rubrique populars*/
+.populars-cards .card {
+    display: flex;
+    margin-top: 33px;
+    height: 136px;
+}
+/* On définit la ⬅➡ et on arrondit les bords des images des populars*/
+.populars-cards img {
+    width: 33%;
+    border-radius: 20px 0px 0px 20px;
+}
+/* On définit le contenu de la carte */
+.populars-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+/* On définit des marges dans les titres des cartes*/
+.populars-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
 
 /****** activité à Marseille ***********/
-
-/* .activity-in-Marseille {
-    border-color: black;
-    border-style: solid;
-	border-width: 2px;
-} */
+/* On ajuste le placement du titre*/
 .activity-in-Marseille h2 {
     padding: 15px;
     margin-left: 15px;
 }
-
+/* On crée une grile qu'on frationne en 4 colonnes*/
 .grid-activity-in-Marseille {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -348,22 +346,21 @@ input {
     box-sizing: border-box;
     padding: 10px 30px 50px 30px;
 }
-
+/* On définit la ⬆⬇ et la ⬅➡ en % du conteneur parent*/
 .grid-activity-in-Marseille img {
     height: 90%;
     width: 100%;
     border-radius: 20px 20px 0px 0px;
-    object-fit: cover;
 }
-
-.card-content-activitys {
+/* On définit les cartes activités*/
+.card-activitys {
     background-color: white;
     border-radius: 20px;
     height: 439px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
-
-.card-content-activitys h3 {
+/* On ajuste le placement des titres */
+.card-activitys .card-title {
     padding: 10px 0 0 10px;
 }
 
@@ -380,12 +377,6 @@ input {
     background-color: var(--grey);
 }
 
-/* on cible les premiers enfants de chaque chaque liste*/
-.footer-column-Left li:nth-child(1),
-.footer-column-Midle li:nth-child(1),
-.footer-column-Right li:nth-child(1) {
-    font-weight: bold;
-}
 /* On rajoute une marge*/
 .footer-box li {
     margin: 10px;

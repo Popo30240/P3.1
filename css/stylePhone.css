@@ -3,7 +3,6 @@
     /************* début de la partie modifiée *************************/
     body .main-container { 
         padding: 0;
-        align-items: center;
     }
     .main-container header { 
         flex-direction: column; 
