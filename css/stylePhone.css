@@ -20,9 +20,10 @@
         margin: 0;
         flex-direction: column;
         align-items: center;
+        border-bottom: 2px solid var(--grey);
     }
     .navbar a:hover {
-        border-top: 2px solid var(--blue) opacity 0;
+        border-top: 2px solid var(--white);
         border-bottom: 2px solid var(--blue);  
     }
     .research-title h1,
@@ -66,7 +67,7 @@
         margin: 10px;
     }
     body .main-container .filterBar .button-filter {
-        flex-wrap: wrap;
+        flex-flow: column wrap;
     }
     .research .infobar .button-filter {
         align-items: center;
